@@ -1,3 +1,21 @@
 ---
-title: "projet_TPC"
+title: "Idées"
 ---
+
+# Site des données :
+
+[Policy uncertainly](http://www.policyuncertainty.com/)
+
+# Variables Y :
+
+Cours du pétrole WTI
+
+Données mensuelles :
+
+Période : 1987-2023
+
+## Variables X : 
+
+### Variables d'incertitude 
+
+### Variables autres
