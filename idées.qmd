@@ -2,6 +2,9 @@
 title: "Idées"
 ---
 
+# type de données : Mensuelles 
+
+Regarder comment on fait pour les dates. 
 # Site des données :
 
 [Policy uncertainly](http://www.policyuncertainty.com/)
@@ -20,13 +23,13 @@ Période : 1987-2023
 
 2.  Var : EPU Economic policy uncertainly
 
-3.  Var : US equity market volatility index
+3.  Var : EMV equity market volatility index
 
     \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
 
 4.  Var : [Cours spot de l'or](https://www.investing.com/currencies/xau-usd-historical-data)
 
-5.  Var : [Geopolitica risk index](https://www.matteoiacoviello.com/gpr.htm)
+5.  Var : [Geopolitical risk index](https://www.matteoiacoviello.com/gpr.htm)
 
 6.  Var : [Sticky price consumer price index less food and energy](https://fred.stlouisfed.org/series/CORESTICKM159SFRBATL)
 
@@ -34,9 +37,21 @@ Période : 1987-2023
 
 8.  Var : [Euro-Dollars](https://www.investing.com/currencies/eur-usd-historical-data)
 
-9.  Var :
+9.  Var : [University of Michigan: Consumer Sentiment](https://fred.stlouisfed.org/series/UMCSENT)
 
-10. Var :
+10. Var :[Natural Gas spot price](https://www.eia.gov/naturalgas/data.php) Problème : 1997, alternative : EU Gas Prices
+
+11. Var : [Global price of Iron Ore](https://fred.stlouisfed.org/series/PIORECRUSDM)
+
+12. [Producer Price Index by Commodity: Nonmetallic Mineral Products: Hydraulic Fracturing Sand and All Other Industrial Sand](https://fred.stlouisfed.org/series/WPU13990121)
+
+13. [Financial Stress Indicator](http://www.policyuncertainty.com/financial_stress.html)
+
+14. [World Uncertainty Index for Islamic Republic of Iran ](https://fred.stlouisfed.org/series/WUIIRN)
+
+15. [Equity Market Volatility Tracker: Energy And Environmental Regulation](https://fred.stlouisfed.org/series/EMVENRGYENVREG)
+
+16. [Economic Policy Uncertainty Index for China ](https://fred.stlouisfed.org/series/CHIEPUINDXM)
 
 **Prendre le VIX ou plein de sous VIX :**
 
