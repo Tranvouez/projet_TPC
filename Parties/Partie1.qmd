@@ -1,14 +1,17 @@
 ---
-title: "Partie 1"
-format: pdf
+format: 
+  pdf: 
+    documentclass: scrartcl
+title: "Analyse préliminaire"
+
 ---
 
-\- faire les statitiques finales sur la dernière variables Y et verrifier les atypiques avant et après la sationnarisation
+# Présentation et caractérisation de la série étudiée : source, définition, graphique
 
-```{r}
-base <- read.csv2("Base/base_complete.csv")
-View(base)
-```
+Lorsque l'on étudie les prix du pétrole, plusieurs options se présentent. Ces options diffèrent en fonction du type de contrat (spot, futures). Ici, nous avons choisi de s'intéresser aux prix spot, c'est à dire aux prix à d'un baril à un l'instant présent. Ensuite, il a fallu choisir quelle type de pétrole nous souhaitions étudier. Ici, nous avons décidé de nous intéresser au West Texas Intermediate (WTI). Le WTI est un type de pétrole brut utilisé comme réference dans le monde entier. Ici, les données ont pu être extracter sur la FRED St Louis sous la forme 
+
+
+\- faire les statitiques finales sur la dernière variables Y et verrifier les atypiques avant et après la sationnarisation
 
 ```{r}
 library(stR)
