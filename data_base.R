@@ -106,7 +106,7 @@ str(base)
 ##### Valeurs manquantes #############
 base <- slice(base, -c(285:290))
 str(base)
-is.na(base)
+apply(base_brut, 2, function(x) any(is.na(x)))
 ###### Exportation ##############
 write.csv2(base,"Parties/Base/base_complete.csv", row.names = FALSE)
 
