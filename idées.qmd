@@ -10,62 +10,56 @@ Regarder comment on fait pour les dates. \# Site des données :
 
 # Variables Y :
 
-Cours du pétrole WTI
-
-Données mensuelles
-
-Période : 1987-2023
+Cours du pétrole WTI , Données mensuelles, Période : 1987-2023
 
 ## Variables X :
 
-1.  Var : CPU Climate policy uncertainly
+1.  Var : [CPU Climate policy uncertainly](http://www.policyuncertainty.com/climate_uncertainty.html) x
 
-2.  Var : EPU Economic policy uncertainly
+2.  Var : [Economic Policy Uncertainty Index for United States](https://fred.stlouisfed.org/series/USEPUINDXD) x
 
-3.  Var : EMV equity market volatility index
+3.  Var : [Economic Policy Uncertainty Index for China](https://fred.stlouisfed.org/series/CHIEPUINDXM) x
 
-    \-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\--
+4.  Var : [Equity Market Volatility Tracker: Overall](https://fred.stlouisfed.org/series/EMVOVERALLEMV) x
 
-4.  Var : [Cours spot de l'or](https://www.investing.com/currencies/xau-usd-historical-data)
+5.  Var : [Equity Market Volatility Tracker: Energy And Environmental Regulation](https://fred.stlouisfed.org/series/EMVENRGYENVREG) x
 
-5.  Var : [Geopolitical risk index](https://www.matteoiacoviello.com/gpr.htm)
+6.  Var : [Equity Market Volatility Tracker: Commodity Markets](https://fred.stlouisfed.org/series/EMVCOMMMKT) x
 
-6.  Var : [Sticky price consumer price index less food and energy](https://fred.stlouisfed.org/series/CORESTICKM159SFRBATL)
+7.  Var: [Equity Market Volatility Tracker: Elections And Political Governance](https://fred.stlouisfed.org/series/EMVELECTGOVRN) x
 
-7.  Var : [Federal fund effective rate](https://fred.stlouisfed.org/series/fedfunds)
+8.  Var : [Cours spot de l'or](https://www.investing.com/currencies/xau-usd-historical-data) x
 
-8.  Var : [Euro-Dollars](https://www.investing.com/currencies/eur-usd-historical-data)
+9.  Var : [Natural Gas spot price](https://www.eia.gov/naturalgas/data.php) Problème : 1997, x
 
-9.  Var : [University of Michigan: Consumer Sentiment](https://fred.stlouisfed.org/series/UMCSENT)
+10. Var : [Euro-Dollars](https://www.investing.com/currencies/eur-usd-historical-data) x
 
-10. Var : [Natural Gas spot price](https://www.eia.gov/naturalgas/data.php) Problème : 1997,
+11. Var : [Global price of Iron Ore](https://fred.stlouisfed.org/series/PIORECRUSDM) x
 
-    1.  alternative : EU Gas Prices [1990-2023](https://uk.investing.com/commodities/natural-gas-historical-data)
+12. Var :[Consumer Price Index for All Urban Consumers: All Items Less Food and Energy in U.S. City Average](https://fred.stlouisfed.org/series/CPILFESL) x
 
-11. Var : [Global price of Iron Ore](https://fred.stlouisfed.org/series/PIORECRUSDM)
+13. Var : [Producer Price Index by Commodity: Nonmetallic Mineral Products: Hydraulic Fracturing Sand and All Other Industrial Sand](https://fred.stlouisfed.org/series/WPU13990121) x
 
-12. Var : [Producer Price Index by Commodity: Nonmetallic Mineral Products: Hydraulic Fracturing Sand and All Other Industrial Sand](https://fred.stlouisfed.org/series/WPU13990121)
+14. Var : [University of Michigan: Consumer Sentiment](https://fred.stlouisfed.org/series/UMCSENT) x
 
-13. Var : [Financial Stress Indicator](http://www.policyuncertainty.com/financial_stress.html)
+15. Var : [Federal fund effective rate](https://fred.stlouisfed.org/series/fedfunds) x
 
-14. Var : [World Uncertainty Index for Islamic Republic of Iran](https://fred.stlouisfed.org/series/WUIIRN)
+**Premiere déselection**
 
-15. Var : [Equity Market Volatility Tracker: Energy And Environmental Regulation](https://fred.stlouisfed.org/series/EMVENRGYENVREG)
+-   [Equity Market Volatility Tracker: Monetary Policy](https://fred.stlouisfed.org/series/EMVMONETARYPOL) 0
 
-16. Var : [Economic Policy Uncertainty Index for China](https://fred.stlouisfed.org/series/CHIEPUINDXM)
+-   [Equity Market Volatility Tracker: Exchange Rates](https://fred.stlouisfed.org/series/EMVEXRATES) o
 
-**Prendre le VIX ou plein de sous VIX :**
+-   [Economic Policy Uncertainty Index: Categorical Index: Health care](https://fred.stlouisfed.org/series/EPUHEALTHCARE) o
 
--   [Equity Market Volatility Tracker: Monetary Policy](https://fred.stlouisfed.org/series/EMVMONETARYPOL)
+-   [Economic Policy Uncertainty Index: Categorical Index: Sovereign debt, currency crises](https://fred.stlouisfed.org/series/EPUSOVDEBT) o
 
--   [Equity Market Volatility Tracker: Commodity Markets](https://fred.stlouisfed.org/series/EMVCOMMMKT)
+-   [Equity Market Volatility: Infectious Disease Tracker](https://fred.stlouisfed.org/series/INFECTDISEMVTRACK) o
 
--   [Equity Market Volatility Tracker: Exchange Rates](https://fred.stlouisfed.org/series/EMVEXRATES)
+-   [Geopolitical risk index](https://www.matteoiacoviello.com/gpr.htm) o
 
--   [Equity Market Volatility Tracker: Elections And Political Governance](https://fred.stlouisfed.org/series/EMVELECTGOVRN)
+-   alternative : EU Gas Prices [1990-2023](https://uk.investing.com/commodities/natural-gas-historical-data) o
 
--   [Economic Policy Uncertainty Index: Categorical Index: Health care](https://fred.stlouisfed.org/series/EPUHEALTHCARE)
+-   [Financial Stress Indicator](http://www.policyuncertainty.com/financial_stress.html) o
 
--   [Economic Policy Uncertainty Index: Categorical Index: Sovereign debt, currency crises](https://fred.stlouisfed.org/series/EPUSOVDEBT)
-
--   [Equity Market Volatility: Infectious Disease Tracker](https://fred.stlouisfed.org/series/INFECTDISEMVTRACK)
+-   [World Uncertainty Index for Islamic Republic of Iran](https://fred.stlouisfed.org/series/WUIIRN) 0
