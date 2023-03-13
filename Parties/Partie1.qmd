@@ -6,6 +6,11 @@ format: pdf
 \- faire les statitiques finales sur la dernière variables Y et verrifier les atypiques avant et après la sationnarisation
 
 ```{r}
+base <- read.csv2("Base/base_complete.csv")
+View(base)
+```
+
+```{r}
 library(stR)
 ```
 
