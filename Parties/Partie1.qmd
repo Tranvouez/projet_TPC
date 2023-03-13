@@ -14,11 +14,57 @@ Lorsque l'on étudie les prix du pétrole, plusieurs options se présentent. Ces
 \- faire les statitiques finales sur la dernière variables Y et verrifier les atypiques avant et après la sationnarisation
 
 ```{r}
-library(stR)
+{
+  library(stR)
+  library(tsoutliers)
+  library(readxl)
+  library(seastests)
+  library(TSA)
+  library(RJDemetra)
+  library(rAMCharts)
+  library(stlplus)
+  library(forecast)
+  library(ATAforecasting)
+  library(seasonal)
+  library(stR)
+  library(timeSeries)
+}
 ```
 
 ```{r}
-library(tsoutliers)
-y <- read.table("demandbrut.txt")
-yy <- ts(data = y, start=c(1996,01),frequency=12)
+base_brut <- read.csv2("Base/base_complete.csv")
+
+WTI <- read.csv2("Base/WTI.csv", sep = ",")
+WTI$DATE <- as.Date(WTI$DATE,format="%Y-%m-%d")
+str(WTI$DATE)
+WTI_ts <- ts(WTI$WTISPLC, frequency = 12, start = "1999-01-01", end = "2022-08-01")
+
+
+WTI_ts
+
+
+fit <- tso(WTI_ts) 
+plot(fit)
+show(fit)
+
+adj <- fit$yadj
+plot(adj)
+write(t(adj),file="ipi1984_TC.out",ncolumn=1,append=FALSE)
+
 ```
+
+
+
+```{r}
+
+for (i in 1:10) {
+  ts_name <- paste0("x", i)  # Nom de la série temporelle
+  ts_name_tso <- paste0("xtso", i)  # Nom de la nouvelle série temporelle
+  assign(ts_name_tso, tso(get(ts_name)))  # Appliquer la fonction tso() et stocker le résultat
+  assign(ts_name, get(ts_name_tso)$yadj)  # Stocker la série temporelle ajustée
+}
+```
+
+
+
+
