@@ -1,0 +1,24 @@
+---
+format: 
+  pdf: 
+    documentclass: scrartcl
+title: "Introduction"
+
+---
+
+première révolution industrielle 
+
+les énergies fossiles
+
+
+les hydrocarbures et en particulier le pétrole occupent une place centrale dans nos économies. Par sa facilité d'extraction, de transport et de consommation, le pétrole reste aujourd'hui la source d'énergie la plus utilisée dans le monde. En effet, selon l'Agence Internationale de l'Energie, le pétrole représente encore aujourd'hui 40,4% de la consommation mondiale d'énergie\footnote{\url{https://www.iea.org/reports/key-world-energy-statistics-2021/final-consumption}}. En s'engageant dans les accords de Paris en 2015, les pays du monde entier ont décidé de réduire drastiquement leur dépendance au pétrole d'ici 2050. Ainsi, étudier l'impact de l'incertitude sur le cours du pétrole est un enjeu majeur pour les économies du monde entier.
+
+
+
+Le but de cette étude sera, à travers plusieurs variables, de trouver celles qui ont le plus d'impact sur le cours du pétrole. Pour répondre à cette problématique, nous diviserons notre étude en six parties. Dans la première, nous nous attarderons sur l
+
+
+ 
+ Nous répondrons à cette problématique en six chapitres distincts. Les trois premières seront consacrées à l'étude et l'analyse de nos trois variables. Nous nous aiderons de la littérature économique ainsi que de méthodes de statistiques descriptives afin de justifier et présenter le choix de nos variables. Le quatrième et cinquième chapitre seront entièrement dédiés à la méthodologie ARIMA. Nous commencerons par présenter cette méthodologie puis nous la mettrons en pratique directement sur notre variable explicative afin de dégager le modèle le plus efficace. Finalement, le dernier chapitre sera lui dédié aux tests de cointégration d'Engle-Granger. Nous ajouterons deux variables explicatives dans notre analyse afin d'essayer de dégager un lien de causalité entre nos trois variables.
+
+

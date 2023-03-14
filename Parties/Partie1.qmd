@@ -1,17 +1,119 @@
 ---
-title: "Partie 1"
-format: pdf
+format: 
+  pdf: 
+    documentclass: scrartcl
+title: "Analyse préliminaire"
+
 ---
 
-\- faire les statitiques finales sur la dernière variables Y et verrifier les atypiques avant et après la sationnarisation
+# Présentation et caractérisation de la série étudiée : source, définition, graphique
+
+Lorsque l'on étudie les prix du pétrole, plusieurs options se présentent. Ces options diffèrent en fonction du type de contrat (spot, futures). Ici, nous avons choisi de s'intéresser aux prix spot, c'est à dire aux prix à d'un baril à un l'instant présent. Ensuite, il a fallu choisir quelle type de pétrole nous souhaitions étudier. Ici, nous avons décidé de nous intéresser au West Texas Intermediate (WTI). Le WTI est un type de pétrole brut utilisé comme réference dans le monde entier. Ici, les données ont pu être extracter sur la FRED St Louis sous la forme 
+
+
+\- notes: Faire les statitiques finales sur la dernière variables Y et verrifier les atypiques avant et après la sationnarisation
+
 
 ```{r}
-library(stR)
+{
+  library(stR)
+  library(tsoutliers)
+  library(readxl)
+  library(seastests)
+  library(TSA)
+  library(RJDemetra)
+  library(rAMCharts)
+  library(stlplus)
+  library(forecast)
+  library(ATAforecasting)
+  library(seasonal)
+  library(stR)
+  library(timeSeries)
+}
 ```
 
 ```{r}
-library(tsoutliers)
-y <- read.csv2("Base/base_complete.csv")
-getwd()
-yy <- ts(data = y, start=c(1999,01),frequency=12)
+base_brut <- read.csv2("Base/base_complete.csv")
+str(base_brut)
+base_brut$DATE <- as.Date(base_brut$DATE, format="%Y-%m-%d")
+
+
+WTI <- read.csv2("Base/WTI.csv", sep = ",")
+
+
+WTI_ts
+
+
+fit <- tso(var_1) 
+plot(fit)
+show(fit)
+
+adj <- fit$yadj
+plot(adj)
+write(t(adj),file="var_1",ncolumn=1,append=FALSE)
+
 ```
+
+```{r}
+# Créer une liste pour stocker les séries chronologiques
+series <- list()
+
+# Itérer à travers chaque colonne (à l'exception de la première colonne)
+for (i in 2:ncol(base_brut)) {
+  
+  # Convertir la colonne en une série chronologique
+  serie <- ts(base_brut[, i], frequency = 12)
+  
+  # Stocker la série chronologique dans la liste
+  series[[i]] <- serie
+}
+
+# Concaténer toutes les séries chronologiques en un objet data.frame
+series_df <- data.frame(base_brut$DATE, series)
+```
+
+
+```{r}
+
+# Charger la bibliothèque de la série temporelle R
+library("tseries")
+
+# Charger les données
+base_brut <- read.csv2("Base/base_complete.csv")
+base_brut$DATE <- as.Date(base_brut$DATE, format="%Y-%m-%d")
+# Créer une liste pour stocker les résultats
+resultats <- list()
+
+# Itérer à travers chaque colonne de la base de données (à l'exception de la première colonne)
+for (i in 2:ncol(base_brut)) {
+  
+  # Appliquer le modèle tso à la colonne
+  fit <- tso(base_brut[, i])
+  
+  # Afficher le graphique
+  plot(fit)
+  show(fit)
+  
+  # Stocker les valeurs ajustées dans la liste des résultats
+  adj <- fit$yadj
+  resultats[[i]] <- adj
+  
+  # Créer un graphique de la série temporelle ajustée
+  plot(adj)
+  
+  # Écrire les valeurs ajustées dans un fichier texte
+  nom_fichier <- paste0("var_", i-1, ".txt")
+  write(t(adj), file=nom_fichier, ncolumns=1, append=FALSE)
+}
+
+# Concaténer tous les résultats dans un seul objet data.frame
+resultats_df <- data.frame(resultats)
+
+
+
+
+```
+
+
+
+
