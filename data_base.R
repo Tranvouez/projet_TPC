@@ -1,4 +1,6 @@
 #--------------------------------------Construction de la base de donnée---------------------------------------------------------
+
+
 {
   library(readxl)
   library(tidyr)
